@@ -30,8 +30,7 @@ export const PwaInstallPrompt = () => {
   }
 
   return (
-    <Drawer defaultOpen={true}>
-      {/*<DrawerTrigger>Open</DrawerTrigger>*/}
+    <Drawer defaultOpen>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Install Cercle case as an app?</DrawerTitle>
