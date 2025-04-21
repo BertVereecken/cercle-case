@@ -1,0 +1,7 @@
+.pnp.*
+package-lock.json
+*.gen.ts
+dist
+certificates
+.idea
+.next
