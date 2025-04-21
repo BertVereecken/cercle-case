@@ -1,6 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+} from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
 
 export const PwaInstallPrompt = () => {
   const [isIOS, setIsIOS] = useState(false);
@@ -15,28 +25,43 @@ export const PwaInstallPrompt = () => {
   }, []);
 
   if (isStandalone) {
-    return null; // Don't show install button if already installed
+    console.info("This app is already installed. Not prompting again.");
+    return null;
   }
 
   return (
-    <div>
-      <h3>Install App</h3>
-      <button>Add to Home Screen</button>
-      {isIOS && (
-        <p>
-          To install this app on your iOS device, tap the share button
-          <span role="img" aria-label="share icon">
-            {" "}
-            ⎋{" "}
-          </span>
-          and then "Add to Home Screen"
-          <span role="img" aria-label="plus icon">
-            {" "}
-            ➕{" "}
-          </span>
-          .
-        </p>
-      )}
-    </div>
+    <Drawer defaultOpen={true}>
+      {/*<DrawerTrigger>Open</DrawerTrigger>*/}
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle>Install Cercle case as an app?</DrawerTitle>
+          <DrawerDescription>
+            Adding this app to your home screen allows you to keep up to date
+            with the latest news
+            {isIOS && (
+              <p>
+                To install this app on your iOS device, tap the share button
+                <span role="img" aria-label="share icon">
+                  {" "}
+                  ⎋{" "}
+                </span>
+                and then "Add to Home Screen"
+                <span role="img" aria-label="plus icon">
+                  {" "}
+                  ➕{" "}
+                </span>
+                .
+              </p>
+            )}
+          </DrawerDescription>
+        </DrawerHeader>
+
+        <DrawerFooter>
+          <DrawerClose>
+            <Button variant="outline">Cancel</Button>
+          </DrawerClose>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
 };
