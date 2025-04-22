@@ -45,7 +45,7 @@ const GameScore = ({
     <div className={"flex gap-1 text-3xl font-bold text-white"}>
       <p className={"italic"}>{winningScore}</p>
       <span>-</span>
-      <p className={"italic text-green-500"}>{losingScore}</p>
+      <p className={"italic text-lime-500"}>{losingScore}</p>
     </div>
   );
 };

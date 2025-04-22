@@ -6,7 +6,7 @@ export const BottomNavigation: FC = () => (
     <div className="grid grid-cols-5 text-center py-2">
       <a
         href="#"
-        className="flex flex-col items-center justify-center text-green-500"
+        className="flex flex-col items-center justify-center text-lime-500"
       >
         <Home className="w-5 h-5" />
         <span className="text-xs mt-1">Home</span>

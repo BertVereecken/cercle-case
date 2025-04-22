@@ -25,7 +25,7 @@ export default function Home() {
 
           {/* Progress indicator */}
           <div className="flex gap-2 mt-4 mb-2">
-            <div className="h-1.5 bg-green-500 w-1/3" />
+            <div className="h-1.5 bg-lime-500 w-1/3" />
             <div className="h-1.5 bg-gray-600 w-1/3" />
             <div className="h-1.5 bg-gray-600 w-1/3" />
           </div>

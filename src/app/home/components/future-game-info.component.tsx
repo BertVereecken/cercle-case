@@ -26,7 +26,7 @@ export const FutureGameInfo = ({
         </div>
 
         {!futureGameInfo.isFullyBooked && (
-          <div className={"bg-green-500 p-2"}>
+          <div className={"bg-lime-500 p-2"}>
             <TicketCheck />
           </div>
         )}
