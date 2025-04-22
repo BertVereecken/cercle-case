@@ -1,10 +1,12 @@
 [
   {
+    "id": 1,
     "gameName": "KRC Genk",
     "gameDate": "2025-05-05T18:00:00.000Z",
     "isFullyBooked": false
   },
   {
+    "id": 2,
     "gameName": "KV Kortrijk",
     "gameDate": "2025-05-07T16:00:00.000Z",
     "isFullyBooked": false

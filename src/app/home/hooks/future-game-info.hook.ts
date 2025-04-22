@@ -5,12 +5,14 @@ import futureGamesJson from "../../../future-games-info.json";
 import { queryKeys } from "@/constants/querykeys";
 
 const futureGamesInfoDtoSchema = z.object({
+  id: z.number(),
   gameName: zz.nonEmptyString,
   gameDate: zz.isoDateTimeSchema,
   isFullyBooked: z.boolean(),
 });
 
 const futureGamesInfoSchema = z.object({
+  id: z.number(),
   gameName: zz.nonEmptyString,
   gameDate: z.date(),
   isFullyBooked: z.boolean(),
