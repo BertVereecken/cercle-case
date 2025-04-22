@@ -1,6 +1,6 @@
 import React from "react";
 import { Description, SubTitle } from "@/components/typography";
-import { format } from "date-fns";
+import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import { RecentNewsArticle } from "@/app/home/hooks/recent-news.hook";
 
@@ -24,7 +24,9 @@ export const RecentNewsItem = ({
           <div className={"flex flex-col"}>
             <SubTitle underline={false}>{recentNewsArticle.title}</SubTitle>
             <Description>
-              {format(recentNewsArticle.publishedDate, "eeee dd MMMM, HH:mm")}
+              {formatDistanceToNow(recentNewsArticle.publishedDate, {
+                addSuffix: true,
+              })}
             </Description>
           </div>
         </div>
