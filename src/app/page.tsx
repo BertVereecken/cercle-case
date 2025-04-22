@@ -3,6 +3,7 @@ import { AllInfoButton } from "@/components/all-info-button";
 import { PwaInstallPrompt } from "@/components/install-prompt";
 import { FutureGames } from "@/app/home/components/future-games.component";
 import { RecentNews } from "@/app/home/components/recent-news.component";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,15 +11,15 @@ export default function Home() {
       <PwaInstallPrompt />
 
       <div className="relative h-[200px]">
-        {/*<Image*/}
-        {/*  src="/placeholder.svg?height=200&width=375"*/}
-        {/*  alt="Stadium"*/}
-        {/*  width={375}*/}
-        {/*  height={200}*/}
-        {/*  className="object-cover w-full h-full brightness-75"*/}
-        {/*/>*/}
+        <Image
+          src="/stadium.png"
+          alt="Stadium"
+          width={375}
+          height={200}
+          className="object-cover w-full h-full brightness-75"
+        />
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4">
-          <h1 className="text-2xl font-bold uppercase leading-tight">
+          <h1 className="text-2xl font-bold uppercase leading-tight text-white italic w-3/4">
             Alle foto&apos;s na de puntendeling tegen Eupen
           </h1>
 
