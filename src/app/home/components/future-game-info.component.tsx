@@ -34,25 +34,3 @@ export const FutureGameInfo = ({
     </div>
   );
 };
-
-interface GameScoreProps {
-  winningScore: number;
-  losingScore: number;
-}
-
-const GameScore = ({
-  winningScore,
-  losingScore,
-}: GameScoreProps): React.ReactElement => {
-  return (
-    <span>
-      <p className={"underline italic text-white uppercase font-semibold"}>
-        {winningScore}
-      </p>
-
-      <p className={"underline italic uppercase font-semibold text-green-500"}>
-        {losingScore}
-      </p>
-    </span>
-  );
-};

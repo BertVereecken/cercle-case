@@ -1,9 +1,9 @@
 import { HeaderTitle } from "@/components/typography";
 import { AllInfoButton } from "@/components/all-info-button";
 import { PwaInstallPrompt } from "@/components/install-prompt";
-import { FutureGames } from "@/app/home/components/future-games.component";
 import { RecentNews } from "@/app/home/components/recent-news.component";
 import Image from "next/image";
+import { RecentAndUpcomingGames } from "./home/components/recent-and-upcoming-games.component";
 
 export default function Home() {
   return (
@@ -38,7 +38,7 @@ export default function Home() {
           <AllInfoButton />
         </div>
 
-        <FutureGames />
+        <RecentAndUpcomingGames />
 
         <div className={"flex justify-between items-center pb-4"}>
           <HeaderTitle>Nieuws</HeaderTitle>
