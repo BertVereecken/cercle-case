@@ -13,7 +13,7 @@ export const FutureGameInfo = ({
   futureGameInfo,
 }: FutureGameInfoProps): React.ReactElement => {
   return (
-    <div className={"bg-zinc-500 p-3"}>
+    <div className={"bg-neutral-700 p-3"}>
       <div className={"flex justify-between items-center"}>
         <div className={"flex gap-4"}>
           <Image src={"/krc-genk.png"} alt={"genk"} width={30} height={30} />

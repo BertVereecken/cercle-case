@@ -10,7 +10,7 @@ export const SubTitle: FC<
 > = ({ children, italic = true, underline, capitalized = true }) => (
   <p
     className={cn(
-      `text-white font-semibold ${capitalized && "uppercase"} ${italic && "italic"} ${underline && "underline"}`,
+      `text-white font-bold ${capitalized && "uppercase"} ${italic && "italic"} ${underline && "underline"}`,
     )}
   >
     {children}
@@ -18,17 +18,23 @@ export const SubTitle: FC<
 );
 
 export const Description: FC<
-  PropsWithChildren<{ italic?: boolean; underline?: boolean }>
-> = ({ children, italic = true, underline }) => (
+  PropsWithChildren<{
+    italic?: boolean;
+    underline?: boolean;
+    className?: string;
+  }>
+> = ({ children, italic = true, underline, className }) => (
   <p
-    className={`text-gray-400 text-xs ${italic && "italic"} ${underline && "underline"}`}
+    className={cn(
+      `text-gray-400 text-xs ${italic && "italic"} ${underline && "underline"} ${className}`,
+    )}
   >
     {children}
   </p>
 );
 
 export const HeaderTitle: FC<PropsWithChildren> = ({ children }) => (
-  <h2 className={"text-white uppercase text-xl font-semibold italic"}>
+  <h2 className={"text-white uppercase text-xl font-bold italic"}>
     {children}
   </h2>
 );
