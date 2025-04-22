@@ -1,7 +1,7 @@
 import { zz } from "@/constants/zz";
 import { z } from "zod";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import futureGamesJson from "../future-games-info.json";
+import futureGamesJson from "../../../future-games-info.json";
 import { queryKeys } from "@/constants/querykeys";
 
 const futureGamesInfoDtoSchema = z.object({

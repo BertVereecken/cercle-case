@@ -1,7 +1,7 @@
 import { HeaderTitle } from "@/components/typography";
 import { AllInfoButton } from "@/components/all-info-button";
-import { FutureGames } from "@/components/future-games.component";
 import { PwaInstallPrompt } from "@/components/install-prompt";
+import { FutureGames } from "@/app/home/components/future-games.component";
 
 export default function Home() {
   return (

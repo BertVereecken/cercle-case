@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { useFutureGames } from "@/hooks/future-game-info.hook";
-import { FutureGameInfo } from "@/components/game-info.component";
+import { FutureGameInfo } from "@/app/home/components/game-info.component";
+import { useFutureGames } from "@/app/home/hooks/future-game-info.hook";
 
 export const FutureGames = (): React.ReactElement => {
   const futureGamesQuery = useFutureGames();
