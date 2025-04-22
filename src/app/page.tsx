@@ -38,7 +38,9 @@ export default function Home() {
           <AllInfoButton />
         </div>
 
-        <RecentAndUpcomingGames />
+        <div className={"pb-8"}>
+          <RecentAndUpcomingGames />
+        </div>
 
         <div className={"flex justify-between items-center pb-4"}>
           <HeaderTitle>Nieuws</HeaderTitle>

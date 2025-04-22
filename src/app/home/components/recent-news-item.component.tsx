@@ -12,23 +12,27 @@ export const RecentNewsItem = ({
   recentNewsArticle,
 }: RecentNewsItemProps): React.ReactElement => {
   return (
-    <div className={"bg-zinc-500 p-3"}>
-      <div className={"flex justify-between items-center"}>
-        <div className={"flex gap-4"}>
+    <div className={"bg-zinc-500 h-[120px]"}>
+      <div className={"flex gap-4 h-full"}>
+        <div className={"flex w-1/3 min-w-1/3"}>
           <Image
             src={"/voetballer1.png"}
             alt={"voetballer"}
             width={30}
             height={30}
+            className="object-cover h-full w-full"
           />
-          <div className={"flex flex-col"}>
-            <SubTitle underline={false}>{recentNewsArticle.title}</SubTitle>
-            <Description>
-              {formatDistanceToNow(recentNewsArticle.publishedDate, {
-                addSuffix: true,
-              })}
-            </Description>
-          </div>
+        </div>
+
+        <div className={"flex flex-col justify-center"}>
+          <SubTitle underline={false} capitalized={false}>
+            {recentNewsArticle.title}
+          </SubTitle>
+          <Description>
+            {formatDistanceToNow(recentNewsArticle.publishedDate, {
+              addSuffix: true,
+            })}
+          </Description>
         </div>
       </div>
     </div>

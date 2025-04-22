@@ -2,11 +2,15 @@ import { FC, PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
 
 export const SubTitle: FC<
-  PropsWithChildren<{ italic?: boolean; underline?: boolean }>
-> = ({ children, italic = true, underline }) => (
+  PropsWithChildren<{
+    italic?: boolean;
+    underline?: boolean;
+    capitalized?: boolean;
+  }>
+> = ({ children, italic = true, underline, capitalized = true }) => (
   <p
     className={cn(
-      `text-white uppercase font-semibold ${italic && "italic"} ${underline && "underline"}`,
+      `text-white font-semibold ${capitalized && "uppercase"} ${italic && "italic"} ${underline && "underline"}`,
     )}
   >
     {children}
