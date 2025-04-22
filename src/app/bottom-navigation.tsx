@@ -2,7 +2,7 @@ import { Home, Menu, ShoppingBag, Ticket, User } from "lucide-react";
 import React, { FC } from "react";
 
 export const BottomNavigation: FC = () => (
-  <div className="bg-black border-t border-gray-800">
+  <div className="bg-black border-t border-gray-800 pb-6">
     <div className="grid grid-cols-5 text-center py-2">
       <a
         href="#"
