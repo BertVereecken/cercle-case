@@ -17,7 +17,7 @@ export const RecentNewsItem = ({
         <div className={"flex w-1/3 min-w-1/3"}>
           <Image
             src={"/voetballer1.png"}
-            alt={"voetballer"}
+            alt={"football-player"}
             width={30}
             height={30}
             className="object-cover h-full w-full"
