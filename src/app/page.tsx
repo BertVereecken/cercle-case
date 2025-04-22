@@ -1,22 +1,9 @@
 import { PwaInstallPrompt } from "@/app/install-prompt";
-import { ArrowRight } from "lucide-react";
-import { HeaderTitle, SubTitle } from "@/components/typography";
-import { FutureGameInfo } from "@/components/game-info.component";
-import { useFutureGames } from "@/hooks/future-game-info.hook";
-
-function AllInfoButton() {
-  return (
-    <div className={"flex gap-2"}>
-      <SubTitle>Alle</SubTitle>
-      <ArrowRight className={"text-green-500"} />
-    </div>
-  );
-}
+import { HeaderTitle } from "@/components/typography";
+import { AllInfoButton } from "@/components/all-info-button";
+import { FutureGames } from "@/components/future-games.component";
 
 export default function Home() {
-  const futureGamesQuery = useFutureGames();
-
-  console.log("futureGamesQuery", futureGamesQuery.data);
   return (
     <div className={"border border-green-500"}>
       <PwaInstallPrompt />
@@ -43,27 +30,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={"bg-black p-4 gap-4"}>
+      <div className={"bg-black p-4"}>
         <div className={"flex justify-between items-center pb-4"}>
           <HeaderTitle>Wedstrijden</HeaderTitle>
           <AllInfoButton />
         </div>
 
-        <div className={"pb-2"}>
-          <FutureGameInfo
-            gameDate={new Date("2025-05-05T18:00:00.000")}
-            gameName={"KRC Genk"}
-            isFullyBooked={false}
-          />
-        </div>
-
-        <div className={"pb-2"}>
-          <FutureGameInfo
-            gameDate={new Date("2025-05-07T16:00:00.000")}
-            gameName={"KV Kortrijk"}
-            isFullyBooked={false}
-          />
-        </div>
+        <FutureGames />
       </div>
     </div>
   );
