@@ -4,24 +4,24 @@ import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import futureGamesJson from "../../../future-games-info.json";
 import { queryKeys } from "@/constants/querykeys";
 
-const futureGameInfoDtoSchema = z.object({
+const futureGameInfoItemDtoSchema = z.object({
   id: z.number(),
   gameName: zz.nonEmptyString,
   gameDate: zz.isoDateTimeSchema,
   isFullyBooked: z.boolean(),
 });
 
-const futureGameInfoSchema = z.object({
+const futureGameInfoItemSchema = z.object({
   id: z.number(),
   gameName: zz.nonEmptyString,
   gameDate: z.date(),
   isFullyBooked: z.boolean(),
 });
 
-type FutureGameInfo = z.infer<typeof futureGameInfoSchema>;
+export type FutureGameInfoItem = z.infer<typeof futureGameInfoItemSchema>;
 
-const fetchFutureGamesInfo = (): Array<FutureGameInfo> => {
-  const dto = futureGameInfoDtoSchema.array().parse(futureGamesJson);
+const fetchFutureGamesInfoItems = (): Array<FutureGameInfoItem> => {
+  const dto = futureGameInfoItemDtoSchema.array().parse(futureGamesJson);
 
   return dto.map((game) => ({
     ...game,
@@ -30,11 +30,11 @@ const fetchFutureGamesInfo = (): Array<FutureGameInfo> => {
 };
 
 export const useFutureGames = (): UseQueryResult<
-  Array<FutureGameInfo>,
+  Array<FutureGameInfoItem>,
   unknown
 > => {
   return useQuery({
     queryKey: [queryKeys.FUTURE_GAMES],
-    queryFn: fetchFutureGamesInfo,
+    queryFn: fetchFutureGamesInfoItems,
   });
 };
