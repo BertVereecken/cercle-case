@@ -12,7 +12,7 @@ export const RecentNewsItem = ({
   recentNewsArticle,
 }: RecentNewsItemProps): React.ReactElement => {
   return (
-    <div className={"bg-neutral-700 h-[120px]"}>
+    <div className={"bg-neutral-700 h-[110px]"}>
       <div className={"flex gap-4 h-full"}>
         <div className={"flex w-1/3 min-w-1/3"}>
           <Image
