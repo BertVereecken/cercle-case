@@ -18,7 +18,7 @@ export const FutureGameInfo = ({
         <div className={"flex gap-4"}>
           <Image src={"/krc-genk.png"} alt={"genk"} width={30} height={30} />
           <div className={"flex flex-col"}>
-            <SubTitle underline={false}>{futureGameInfo.gameName}</SubTitle>
+            <SubTitle className={"italic"}>{futureGameInfo.gameName}</SubTitle>
             <Description>
               {format(futureGameInfo.gameDate, "eeee dd MMMM, HH:mm")}
             </Description>

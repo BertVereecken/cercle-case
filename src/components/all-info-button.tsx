@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export function AllInfoButton() {
   return (
     <div className={"flex gap-2"}>
-      <SubTitle underline>Alle</SubTitle>
+      <SubTitle className={"underline italic uppercase"}>Alle</SubTitle>
       <ArrowRight className={"text-green-500"} />
     </div>
   );

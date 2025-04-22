@@ -25,10 +25,8 @@ export const RecentNewsItem = ({
         </div>
 
         <div className={"flex flex-col justify-center gap-1"}>
-          <SubTitle underline={false} capitalized={false} italic={false}>
-            {recentNewsArticle.title}
-          </SubTitle>
-          <Description italic={false} className={"text-white font-semibold"}>
+          <SubTitle>{recentNewsArticle.title}</SubTitle>
+          <Description className={"text-white font-semibold"}>
             {formatDistanceToNow(recentNewsArticle.publishedDate, {
               addSuffix: true,
             })}

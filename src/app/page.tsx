@@ -34,7 +34,7 @@ export default function Home() {
 
       <div className={"bg-black p-4"}>
         <div className={"flex justify-between items-center pb-4"}>
-          <HeaderTitle>Wedstrijden</HeaderTitle>
+          <HeaderTitle className={"italic uppercase"}>Wedstrijden</HeaderTitle>
           <AllInfoButton />
         </div>
 
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         <div className={"flex justify-between items-center pb-4"}>
-          <HeaderTitle>Nieuws</HeaderTitle>
+          <HeaderTitle className={"italic uppercase"}>Nieuws</HeaderTitle>
           <AllInfoButton />
         </div>
 
