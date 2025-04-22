@@ -10,7 +10,7 @@ export const FutureGames = (): React.ReactElement => {
   return (
     <>
       {(futureGamesQuery.data ?? []).map((futureGame) => (
-        <div className={"pb-2"}>
+        <div className={"pb-2"} key={futureGame.gameName}>
           <FutureGameInfo
             gameDate={futureGame.gameDate}
             gameName={futureGame.gameName}

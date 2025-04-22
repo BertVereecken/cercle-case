@@ -2,10 +2,11 @@ import { HeaderTitle } from "@/components/typography";
 import { AllInfoButton } from "@/components/all-info-button";
 import { PwaInstallPrompt } from "@/components/install-prompt";
 import { FutureGames } from "@/app/home/components/future-games.component";
+import { RecentNews } from "@/app/home/components/recent-news.component";
 
 export default function Home() {
   return (
-    <div className={"border border-green-500"}>
+    <div className={"border border-green-500 h-full"}>
       <PwaInstallPrompt />
 
       <div className="relative h-[200px]">
@@ -37,6 +38,13 @@ export default function Home() {
         </div>
 
         <FutureGames />
+
+        <div className={"flex justify-between items-center pb-4"}>
+          <HeaderTitle>Nieuws</HeaderTitle>
+          <AllInfoButton />
+        </div>
+
+        <RecentNews />
       </div>
     </div>
   );
