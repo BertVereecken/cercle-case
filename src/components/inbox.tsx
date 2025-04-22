@@ -1,5 +1,6 @@
 import { Inbox } from "@novu/nextjs";
 import { z } from "zod";
+import { Button } from "@/components/ui/button";
 
 const { NEXT_PUBLIC_NOVU_APP_IDENTIFIER, NEXT_PUBLIC_NOVU_SUBSCRIBER_ID } = z
   .object({
@@ -9,10 +10,12 @@ const { NEXT_PUBLIC_NOVU_APP_IDENTIFIER, NEXT_PUBLIC_NOVU_SUBSCRIBER_ID } = z
   .parse(process.env);
 
 export const NovuInboxCenter = () => (
-  <nav className="flex justify-end items-center p-4 gap-4 h-16">
-    <Inbox
-      applicationIdentifier={NEXT_PUBLIC_NOVU_APP_IDENTIFIER}
-      subscriberId={NEXT_PUBLIC_NOVU_SUBSCRIBER_ID}
-    />
+  <nav className="flex justify-end items-center p-4 gap-4 h-16 bg-black">
+    <Button variant={"outline"} size={"icon"}>
+      <Inbox
+        applicationIdentifier={NEXT_PUBLIC_NOVU_APP_IDENTIFIER}
+        subscriberId={NEXT_PUBLIC_NOVU_SUBSCRIBER_ID}
+      />
+    </Button>
   </nav>
 );

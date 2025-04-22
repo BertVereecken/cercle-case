@@ -17,7 +17,9 @@ export const PastGameInfo = ({
           <Image src={"/kas-eupen.png"} alt={"genk"} width={30} height={30} />
           <div className={"flex flex-col"}>
             <SubTitle className={"italic"}>{pastGameInfo.gameName}</SubTitle>
-            <Description className={"underline"}>Verslag en foto's</Description>
+            <Description className={"underline font-semibold"}>
+              Verslag en foto's
+            </Description>
           </div>
         </div>
         <GameScore
