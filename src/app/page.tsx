@@ -7,7 +7,7 @@ import { RecentAndUpcomingGames } from "./home/components/recent-and-upcoming-ga
 
 export default function Home() {
   return (
-    <div className={"border border-green-500 h-full"}>
+    <div className={"border border-green-500"}>
       <PwaInstallPrompt />
 
       <div className="relative h-[200px]">
@@ -25,9 +25,9 @@ export default function Home() {
 
           {/* Progress indicator */}
           <div className="flex gap-2 mt-4 mb-2">
-            <div className="h-1.5 bg-green-500 w-1/3 rounded-full"></div>
-            <div className="h-1.5 bg-gray-600 w-1/3 rounded-full"></div>
-            <div className="h-1.5 bg-gray-600 w-1/3 rounded-full"></div>
+            <div className="h-1.5 bg-green-500 w-1/3"></div>
+            <div className="h-1.5 bg-gray-600 w-1/3"></div>
+            <div className="h-1.5 bg-gray-600 w-1/3"></div>
           </div>
         </div>
       </div>
